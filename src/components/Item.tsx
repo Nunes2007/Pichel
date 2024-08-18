@@ -2,12 +2,28 @@ import styles from "../App.module.css"
 import { Item } from "../types/item";
 
 
-export const ItemCard = ({name, img, price, id}: Item ) => {
+export const ItemCard = ({name, img, price, newPrice, id}: Item ) => {
     return(
         <div key={id} className={styles.item}>
-            <img src={img} alt="" />
-            <p className={styles.info}>{name}</p>
-            <p><span>{price}</span></p>
+            <div className={styles.imageArea}>
+                <img src={img}/>
+            </div>
+
+            <div className={styles.inforArea}>
+                <p className={styles.infoItem}>{name}</p>
+                <p className={styles.info}>de <span>R$ {price}</span> por:</p>
+            </div>
+
+            <div className={styles.newPriceArea}>
+                <span>à vista</span>
+                <p>R$ {newPrice}</p>
+                <div className={styles.pixValue}>
+                    <p className={styles.discount}>no PIX com 15% de desconto</p>
+                    <div className={styles.line}></div>
+                    <span>R$ 1.058,99</span>
+                    <p>em até 12x de <span>R$ 88,50</span> sem juros no cartão</p>
+                </div>
+            </div>
         </div>
     );
 }
