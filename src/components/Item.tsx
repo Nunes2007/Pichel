@@ -1,10 +1,10 @@
 import styles from "../App.module.css"
-import { Item } from "../types/item";
+import { Item } from "../helpers/item";
+import { Link } from "react-router-dom";
 
-
-export const ItemCard = ({name, img, price, newPrice, id}: Item ) => {
+export const ItemCard = ({name, img, price, newPrice, onClick}: Item ) => {
     return(
-        <div key={id} className={styles.item}>
+        <div className={styles.item} onClick={onClick} >
             <div className={styles.imageArea}>
                 <img src={img}/>
             </div>

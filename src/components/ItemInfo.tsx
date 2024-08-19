@@ -15,14 +15,10 @@ export const ItemInfo = ({img, text}: Props) => {
                 </div>
 
                 <div className={styles.rightArea}>
-                    
-                    <div>
-                    {text}
-                    </div>
+                    <div>{text}</div>
                     <BuyButton
                     label="Comprar"
-                    />
-                    
+                    />  
                 </div>
             </div>
         </div>
